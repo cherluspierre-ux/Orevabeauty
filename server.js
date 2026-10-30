@@ -23,7 +23,8 @@ const vm = require('vm');
 const crypto = require('crypto');
 
 const PORT = Number(process.env.PORT) || 3000;
-const PUBLIC_DIR = path.join(__dirname, 'public');
+// Les fichiers du site sont a la racine du depot (pas dans /public).
+const PUBLIC_DIR = __dirname;
 const DATA_DIR = process.env.DATA_DIR ? path.resolve(process.env.DATA_DIR) : path.join(__dirname, 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 const UPLOAD_DIR = path.join(DATA_DIR, 'uploads');
@@ -99,7 +100,7 @@ const media = {
   }
 };
 
-const core = require('./public/core.js').create({
+const core = require('./core.js').create({
   CONFIG, compute, crypto: nodeCrypto, media
   /* >>> ICI : brancher Stripe / PayPal avec  processPayment: async (order, payment) => ({ paymentStatus: 'paid' })
      (et passer CONFIG.payment.mode a 'live' dans public/config.js) */
