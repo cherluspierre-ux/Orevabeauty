@@ -1,0 +1,46 @@
+OREVA - boutique 1 produit avec comptes, suivi, affiliation, retraits et avis
+==============================================================================
+
+LANCER (recommande, tout est reel sauf l'argent)
+  1. Installer Node.js 18+ (nodejs.org).
+  2. Dans ce dossier :  node server.js
+  3. Ouvrir http://localhost:3000
+  Administration : http://localhost:3000/admin.html
+  La cle admin s'affiche dans la console (temporaire). Pour la fixer :
+     ADMIN_KEY=ma-cle-longue node server.js
+  Les donnees sont dans le dossier data/ (db.json + uploads/ : photos de profil, photos/videos d'avis). Sauvegardez-le.
+
+SANS SERVEUR (double-clic sur public/index.html)
+  Mode DEMONSTRATION : tout fonctionne mais reste dans CE navigateur (comptes, commandes,
+  gains). Les videos d'avis ne sont pas disponibles. Les liens d'affiliation ne marchent pas
+  entre personnes. Pour essayer rapidement seulement.
+
+CE QUI FONCTIONNE
+  - Offre -15 % pour les 50 premiers clients (compteur serveur, 1 rabais par courriel).
+  - Comptes : inscription (photo de profil obligatoire), connexion, profil, mot de passe.
+  - Commandes liees au compte, suivi par etapes + numero de suivi, annulation avant expedition,
+    suivi public (numero + courriel), rattacher une commande passee sans compte.
+  - Affiliation : code + lien (?ref=CODE), commission, solde en attente / disponible / verse,
+    visites, conversion, demandes de retrait (min. dans public/config.js).
+  - Avis : etoiles et nombre d'avis calcules a partir des VRAIS avis ; photos et videos facultatives ;
+    badge "Achat verifie" ; modification / suppression par l'auteur ; moderation dans l'admin.
+  - Bandeau defilant "Disponible chez" : cache tant que public/config.js > partners.items est vide.
+
+CE QUI EST FICTIF (a brancher avant d'ouvrir au public)
+  - PAIEMENT : mode test (carte 4242 4242 4242 4242 ; 4000 0000 0000 0002 = refusee). Aucun argent.
+    Brancher Stripe/PayPal dans server.js (processPayment), puis mettre payment.mode a 'live'
+    dans public/config.js. Cela desactive aussi les boutons "Test : etape suivante".
+  - RETRAITS : le site enregistre la demande (et seulement les 4 derniers chiffres du compte).
+    Le virement reel est a faire par vous (banque, Interac, Stripe Connect, PayPal Payouts),
+    puis "Marquer verse" dans l'admin. Ne jamais stocker de numeros de compte complets.
+  - COURRIELS : aucun courriel automatique n'est envoye (confirmation, mot de passe oublie).
+    Mot de passe oublie : admin > Clients > "Mot de passe temporaire".
+  - Commission : devient disponible quand la commande est marquee "Livree" (admin).
+
+A FAIRE PAR VOUS
+  - Mettre vos vraies valeurs dans public/config.js (lignes ">>> A VERIFIER") : courriel, prix, livraison...
+  - N'ajouter dans "partners" que des enseignes qui vendent reellement le produit (sinon c'est trompeur).
+  - Faire valider les textes legaux (infos.html) et les conditions d'affiliation / fiscalite des gains.
+  - Heberger le serveur (HTTPS obligatoire), definir ADMIN_KEY et COOKIE_SECURE=1.
+
+Le guide PDF fourni precedemment decrit la version 1 (sans comptes) ; ce fichier fait foi pour la version actuelle.

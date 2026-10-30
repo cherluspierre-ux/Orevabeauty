@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bright Boost Gel Cream | Oreva</title>
+  <meta name="description" content="Bright Boost Gel Cream : un gel-crème hydratant et léger pour aider à illuminer le teint terne. -15 % pour les 50 premiers clients.">
+  <meta name="theme-color" content="#1d0f13">
+  <meta property="og:title" content="Bright Boost Gel Cream | Oreva">
+  <meta property="og:description" content="Un gel-crème léger pour un teint plus lumineux. -15 % pour les 50 premiers clients.">
+  <meta property="og:image" content="img/pot.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f2545b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23fff1ee'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body data-home="index.html" data-checkout="checkout.html">
+  <a class="skip-link" href="#produit">Aller au produit</a>
+
+  <!-- BARRE D'ANNONCE (cliquable tant que l'offre est active) -->
+  <div class="announce">
+    <a class="announce-link js-offer-on" href="checkout.html?offer=PREMIERS50&amp;qty=1">
+      <b>−<span data-offer-percent>15</span>&nbsp;%</b> pour les 50 premiers clients
+      <span class="sep">·</span> <span><b data-offer-remaining>50</b> offres restantes</span>
+      <u>J'en profite</u>
+    </a>
+    <p class="announce-text js-offer-off" hidden>Livraison offerte dès <span data-free-over></span> · Retours sous <span data-return-days></span> jours</p>
+  </div>
+
+  <!-- EN-TÊTE (généré par app.js) -->
+  <header class="site-header" data-header></header>
+
+  <div class="page">
+
+    <!-- BANNIÈRE LONGUE À GAUCHE : offre -15 % (cliquable, mène directement à la caisse) -->
+    <aside class="banner-col" aria-label="Offre de lancement">
+      <a class="offer-banner js-offer-on" href="checkout.html?offer=PREMIERS50&amp;qty=1" aria-label="Profiter de l'offre : moins 15 pour cent pour les 50 premiers clients">
+        <span class="ob-top">Offre de lancement</span>
+        <span class="ob-pct">−15<small>%</small></span>
+        <span class="ob-sub">pour les <b>50 premiers</b> clients</span>
+        <span class="ob-pot"><img src="img/pot.png" alt="Pot de Bright Boost Gel Cream"></span>
+        <span class="ob-meter">
+          <span class="bar"><i data-offer-bar></i></span>
+          <small>Plus que <b data-offer-remaining>50</b> offres</small>
+        </span>
+        <span class="ob-cta">J'en profite <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+      <a class="offer-banner is-ended js-offer-off" href="#produit" hidden>
+        <span class="ob-top">Merci !</span>
+        <span class="ob-sub">Les 50 rabais de lancement ont été réclamés.</span>
+        <span class="ob-pot"><img src="img/pot.png" alt="Pot de Bright Boost Gel Cream"></span>
+        <span class="ob-cta">Voir le soin <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+    </aside>
+
+    <main class="content" id="accueil">
+
+      <!-- HÉROS -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span><span class="word">oreva</span></div>
+        <div class="hero-text">
+          <a class="chip chip-offer js-offer-on" href="checkout.html?offer=PREMIERS50&amp;qty=1">
+            <svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg><span>Offre de lancement · −<span data-offer-percent>15</span>&nbsp;% pour les 50 premiers clients</span>
+          </a>
+          <span class="chip js-offer-off" hidden>Nouveauté en boutique</span>
+          <h1 id="hero-title">Révélez l'éclat <em>de votre peau.</em></h1>
+          <p class="lead">Bright Boost Gel Cream : un gel-crème hydratant et léger, formulé avec de l'acide mandélique (AHA), de la gluconolactone (PHA) et de la néoglucosamine, pour aider à illuminer le teint terne et à affiner le grain de peau.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-lg js-offer-on" href="checkout.html?offer=PREMIERS50&amp;qty=1"><span>Profiter de −<span data-offer-percent>15</span>&nbsp;%</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-primary btn-lg js-offer-off" href="#produit" hidden><span>Acheter · <span data-price-base></span></span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost btn-lg" href="#produit">Découvrir le soin</a>
+          </div>
+          <ul class="hero-facts">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Texture gel-crème légère, non grasse</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Non comédogène</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Convient à tous les tons de peau</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Développé avec des dermatologues</li>
+          </ul>
+        </div>
+        <div class="hero-stage">
+          <div class="glow" aria-hidden="true"></div>
+          <img class="hero-pot" src="img/pot.png" alt="Pot ouvert de Bright Boost Gel Cream de Neutrogena, au gel-crème rose pâle">
+          <span class="ground" aria-hidden="true"></span>
+          <span class="float-chip fc1">Acide mandélique <b>AHA</b></span>
+          <span class="float-chip fc2">Gluconolactone <b>PHA</b></span>
+          <span class="float-chip fc3">Néoglucosamine</span>
+          <a class="seal js-offer-on" href="checkout.html?offer=PREMIERS50&amp;qty=1" aria-label="Offre de lancement moins 15 pour cent">
+            <span>−15<small>%</small></span><em>50 premiers clients</em>
+          </a>
+        </div>
+      </section>
+
+      <!-- BANDEAU DE CONFIANCE -->
+      <section class="trust" aria-label="Nos engagements">
+        <div class="trust-item"><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg><div><strong>Livraison offerte</strong><span>dès <span data-free-over></span> d'achat</span></div></div>
+        <div class="trust-item"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg><div><strong>Paiement sécurisé</strong><span>Vos données sont protégées</span></div></div>
+        <div class="trust-item"><svg class="ic" aria-hidden="true"><use href="#i-return"/></svg><div><strong>Retours sous <span data-return-days></span> jours</strong><span>Conditions simples</span></div></div>
+        <div class="trust-item"><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg><div><strong>Une question ?</strong><span>Écrivez-nous, on répond</span></div></div>
+      </section>
+
+      <!-- BANDEAU DÉFILANT « DISPONIBLE CHEZ » : visible seulement si config.js contient de vraies enseignes -->
+      <section class="partners" data-partners hidden></section>
+
+      <!-- FICHE PRODUIT -->
+      <section class="product" id="produit" aria-labelledby="product-title" data-reveal>
+
+        <div class="gallery" data-gallery tabindex="0" aria-label="Galerie du produit (flèches gauche et droite pour naviguer)">
+          <div class="stage">
+            <div class="slide s-pack is-active">
+              <img class="pot zoomable" src="img/pot.png" alt="Pot de Bright Boost Gel Cream, vue de face">
+              <span class="shadow" aria-hidden="true"></span>
+            </div>
+            <div class="slide s-coral">
+              <span class="sun" aria-hidden="true"></span>
+              <img class="pot tilt" src="img/pot.png" alt="Pot de Bright Boost Gel Cream sur fond corail">
+              <span class="shadow" aria-hidden="true"></span>
+            </div>
+            <div class="slide s-dark">
+              <img class="pot macro" src="img/pot.png" alt="Gros plan sur la texture gel-crème du pot ouvert">
+              <p class="cap">Texture gel-crème</p>
+            </div>
+            <div class="slide s-info">
+              <div class="info-card">
+                <h3>En bref</h3>
+                <dl>
+                  <div><dt>Format</dt><dd data-product-size>50 g</dd></div>
+                  <div><dt>Texture</dt><dd>Gel-crème légère</dd></div>
+                  <div><dt>Application</dt><dd>Visage et cou, chaque jour</dd></div>
+                  <div><dt>Actifs</dt><dd>AHA · PHA · néoglucosamine</dd></div>
+                  <div><dt>Marque</dt><dd>Neutrogena</dd></div>
+                </dl>
+              </div>
+            </div>
+            <span class="seal-mini js-offer-on" aria-hidden="true">−<span data-offer-percent>15</span>%</span>
+            <button class="gal-arrow prev" type="button" data-gal-prev aria-label="Photo précédente"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="gal-arrow next" type="button" data-gal-next aria-label="Photo suivante"><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="thumbs" role="tablist" aria-label="Choisir une photo">
+            <button class="thumb is-active" type="button" role="tab" aria-selected="true" aria-label="Vue de face"><span class="mini m-pack"><img src="img/pot.png" alt=""></span></button>
+            <button class="thumb" type="button" role="tab" aria-selected="false" aria-label="Fond corail"><span class="mini m-coral"><img src="img/pot.png" alt=""></span></button>
+            <button class="thumb" type="button" role="tab" aria-selected="false" aria-label="Gros plan texture"><span class="mini m-dark"><img src="img/pot.png" alt=""></span></button>
+            <button class="thumb" type="button" role="tab" aria-selected="false" aria-label="Informations"><span class="mini m-info">En bref</span></button>
+          </div>
+        </div>
+
+        <div class="info">
+          <p class="brand-line">Neutrogena</p>
+          <h2 class="product-title" id="product-title">Bright Boost Gel Cream</h2>
+          <p class="product-sub">Gel-crème hydratant illuminateur · <span data-product-size>50 g</span></p>
+          <div class="rating-line" data-rating-line hidden></div>
+
+          <div class="price-block">
+            <div class="price-row js-offer-on">
+              <span class="price" data-price-now>—</span>
+              <s class="price-was" data-price-was>—</s>
+              <span class="save-chip">−<span data-offer-percent>15</span>&nbsp;% · vous économisez <span data-price-save></span></span>
+            </div>
+            <div class="price-row js-offer-off" hidden><span class="price" data-price-base>—</span></div>
+          </div>
+
+          <div class="offer-strip js-offer-on">
+            <svg class="ic" aria-hidden="true"><use href="#i-bolt"/></svg>
+            <div>
+              <strong>Offre de lancement</strong> réservée aux 50 premiers clients
+              <div class="bar"><i data-offer-bar></i></div>
+              <small>Plus que <b data-offer-remaining>50</b> sur <span data-offer-limit>50</span> · le rabais s'applique automatiquement à la caisse</small>
+            </div>
+          </div>
+
+          <p class="short-desc">Un gel-crème au fini léger qui hydrate sans alourdir. Sa formule associe deux exfoliants doux (AHA et PHA) à la néoglucosamine pour aider à illuminer le teint terne, à uniformiser l'apparence du teint et à affiner le grain de peau.</p>
+
+          <ul class="key-points">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Gel-crème léger, non gras</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Non comédogène</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Pour tous les tons de peau</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Se glisse dans votre routine du matin ou du soir</li>
+          </ul>
+
+          <div class="buybox" data-buybox>
+            <div class="stepper" role="group" aria-label="Quantité">
+              <button type="button" data-qty-minus aria-label="Diminuer la quantité"><svg class="ic" aria-hidden="true"><use href="#i-minus"/></svg></button>
+              <input id="qty" type="text" inputmode="numeric" value="1" aria-label="Quantité" autocomplete="off">
+              <button type="button" data-qty-plus aria-label="Augmenter la quantité"><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></button>
+            </div>
+            <button class="btn btn-primary btn-lg btn-add" type="button" data-add><svg class="ic" aria-hidden="true"><use href="#i-bag"/></svg> Ajouter au panier</button>
+          </div>
+          <a class="btn btn-dark btn-lg btn-block" href="checkout.html" data-buy-now>Acheter maintenant</a>
+
+          <ul class="micro">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg><span>Livraison estimée : <b data-delivery>—</b></span></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Paiement sécurisé</li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-return"/></svg><span>Retours sous <span data-return-days></span> jours</span></li>
+          </ul>
+
+          <div class="acc">
+            <details data-acc="p" open>
+              <summary>Description</summary>
+              <div class="acc-body">
+                <p>Bright Boost Gel Cream est un gel-crème pour le visage au fini léger, pensé pour illuminer le teint terne tout en hydratant la peau. Sa formule contient de l'acide mandélique (un AHA) et de la gluconolactone (un PHA), deux exfoliants doux, ainsi que de la néoglucosamine (acétyl-glucosamine).</p>
+                <p>Il est présenté comme non gras, non comédogène, adapté à tous les tons de peau et développé avec des dermatologues.</p>
+              </div>
+            </details>
+            <details data-acc="p">
+              <summary>Mode d'emploi</summary>
+              <div class="acc-body">
+                <ol>
+                  <li>Appliquer chaque jour sur le visage et le cou nettoyés.</li>
+                  <li>Étaler en massant doucement sur tout le visage.</li>
+                  <li>Le jour, terminer avec une protection solaire.</li>
+                </ol>
+              </div>
+            </details>
+            <details data-acc="p">
+              <summary>Ingrédients</summary>
+              <div class="acc-body">
+                <p class="inci">Aqua, Dimethicone, Glycerin, Mandelic Acid, Gluconolactone, Acetyl Glucosamine, Triethyl Citrate, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Polyacrylate Crosspolymer-6, Butylene Glycol, Ethylhexylglycerin, Squalane, Aluminum Starch Octenylsuccinate, Dimethiconol, Mica, Silica, Tin Oxide, Cetearyl Olivate, Sorbitan Olivate, Sorbitan Isostearate, Polysorbate 60, Cetearyl Alcohol, Dimethicone Crosspolymer, Coco-Glucoside, T-Butyl Alcohol, Succinoglycan, Disodium EDTA, Sodium Hydroxide, Chlorphenesin, Phenoxyethanol, Parfum, Benzyl Salicylate, Citronellol, CI 77891, CI 16035.</p>
+                <p class="note">La formule peut varier d'un pays à l'autre : référez-vous toujours à la liste imprimée sur l'emballage.</p>
+              </div>
+            </details>
+            <details data-acc="p">
+              <summary>Précautions d'emploi</summary>
+              <div class="acc-body">
+                <ul>
+                  <li><b>Ce produit contient des alpha-hydroxyacides (AHA)</b> : évitez l'exposition au soleil et protégez votre peau avec un écran solaire. Ce soin n'est pas un produit solaire.</li>
+                  <li>Éviter le contour des yeux. En cas de contact, rincer à l'eau.</li>
+                  <li>Cesser l'utilisation en cas d'irritation.</li>
+                  <li>Usage externe seulement. Garder hors de la portée des enfants.</li>
+                  <li>Conserver dans un endroit frais et sec, à l'abri du soleil.</li>
+                  <li>En cas de peau sensible ou de condition cutanée (rosacée, eczéma), demandez conseil à un professionnel de la santé.</li>
+                </ul>
+              </div>
+            </details>
+            <details data-acc="p">
+              <summary>Livraison et retours</summary>
+              <div class="acc-body">
+                <p>Livraison en <span data-ship-min></span> à <span data-ship-max></span> jours ouvrables, offerte dès <span data-free-over></span> d'achat (sinon <span data-flat-rate></span>). Vous disposez de <span data-return-days></span> jours pour nous écrire si le produit ne vous convient pas.</p>
+                <p><a class="text-link" href="infos.html#livraison">Détails de la livraison</a> · <a class="text-link" href="infos.html#retours">Politique de retour</a></p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRANDE BANNIÈRE D'OFFRE (cliquable) -->
+      <a class="offer-wide js-offer-on" href="checkout.html?offer=PREMIERS50&amp;qty=1" data-reveal aria-label="Profiter de l'offre de lancement : moins 15 pour cent pour les 50 premiers clients">
+        <span class="ow-visual" aria-hidden="true"><img src="img/pot.png" alt=""></span>
+        <span class="ow-copy">
+          <span class="ow-eyebrow">Offre de lancement</span>
+          <strong class="ow-big">−<span data-offer-percent>15</span>&nbsp;%</strong>
+          <span class="ow-text">sur votre commande, réservé aux <b>50 premiers clients</b>. Dès que les 50 rabais sont réclamés, l'offre se termine automatiquement.</span>
+          <span class="ow-meter">
+            <span class="bar"><i data-offer-bar></i></span>
+            <small><b data-offer-used>0</b> sur <span data-offer-limit>50</span> réclamés · <b data-offer-remaining>50</b> restants</small>
+          </span>
+        </span>
+        <span class="btn btn-light btn-lg ow-cta">J'en profite maintenant <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+      </a>
+      <div class="offer-wide is-ended js-offer-off" hidden>
+        <span class="ow-copy"><span class="ow-eyebrow">Offre de lancement terminée</span>
+          <span class="ow-text">Merci à nos 50 premiers clients ! Bright Boost Gel Cream reste disponible au prix régulier, avec livraison offerte dès <span data-free-over></span>.</span></span>
+        <a class="btn btn-light btn-lg ow-cta" href="#produit">Voir le produit</a>
+      </div>
+
+      <!-- POURQUOI -->
+      <section class="section" id="pourquoi" data-reveal>
+        <div class="section-head">
+          <span class="eyebrow">La formule</span>
+          <h2>Ce qui fait <em>la différence</em></h2>
+          <p>Trois familles d'actifs, une texture légère, un geste quotidien.</p>
+        </div>
+        <div class="benefits">
+          <article class="benefit">
+            <span class="b-ic"><svg class="ic" aria-hidden="true"><use href="#i-flask"/></svg></span>
+            <h3>AHA + PHA, tout en douceur</h3>
+            <p>L'acide mandélique (AHA) et la gluconolactone (PHA) exfolient doucement la surface de la peau pour aider à réduire l'aspect terne et à affiner le grain de peau.</p>
+          </article>
+          <article class="benefit">
+            <span class="b-ic"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg></span>
+            <h3>Néoglucosamine</h3>
+            <p>Un ingrédient formulé pour aider à atténuer l'apparence des taches sombres et à uniformiser le teint, avec un usage régulier.</p>
+          </article>
+          <article class="benefit">
+            <span class="b-ic"><svg class="ic" aria-hidden="true"><use href="#i-drop"/></svg></span>
+            <h3>Hydrate sans alourdir</h3>
+            <p>Un gel-crème au fini léger et non gras qui laisse la peau confortable, sans effet collant.</p>
+          </article>
+          <article class="benefit">
+            <span class="b-ic"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg></span>
+            <h3>Pensé pour tous</h3>
+            <p>Non comédogène, adapté à tous les tons de peau et développé avec des dermatologues.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- TEXTURE (éditorial) -->
+      <section class="feature" data-reveal aria-labelledby="feature-title">
+        <div class="feature-visual" aria-hidden="true">
+          <span class="f-ring"></span>
+          <img src="img/pot.png" alt="">
+          <span class="callout co1"><i></i>Gel-crème léger</span>
+          <span class="callout co2"><i></i><span>Pot de <span data-product-size>50 g</span></span></span>
+        </div>
+        <div class="feature-text">
+          <span class="eyebrow on-dark">La texture</span>
+          <h2 id="feature-title">Un gel-crème qui <em>fond</em> sur la peau</h2>
+          <p>Ni trop épais, ni trop fluide : une texture légère qui s'étale facilement et se fait oublier une fois appliquée. Idéal sous votre protection solaire, le jour comme le soir.</p>
+          <ul class="feature-list">
+            <li><b>01</b><div><strong>Une texture douce</strong><span>Fini léger, non gras.</span></div></li>
+            <li><b>02</b><div><strong>Un geste simple</strong><span>Sur visage et cou nettoyés, en massant doucement.</span></div></li>
+            <li><b>03</b><div><strong>Un rituel régulier</strong><span>À intégrer chaque jour à votre routine.</span></div></li>
+          </ul>
+          <a class="btn btn-primary btn-lg" href="#produit">Ajouter à ma routine <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </section>
+
+      <!-- UTILISATION -->
+      <section class="section" id="utilisation" data-reveal>
+        <div class="section-head">
+          <span class="eyebrow">Mode d'emploi</span>
+          <h2>Votre routine en <em>4 gestes</em></h2>
+          <p>Simple, rapide, et à faire chaque jour.</p>
+        </div>
+        <ol class="steps">
+          <li class="step"><span class="step-n">1</span><h3>Nettoyer</h3><p>Commencez avec un visage et un cou propres.</p></li>
+          <li class="step"><span class="step-n">2</span><h3>Appliquer</h3><p>Prélevez une petite quantité de gel-crème.</p></li>
+          <li class="step"><span class="step-n">3</span><h3>Masser</h3><p>Étalez en massant doucement sur tout le visage.</p></li>
+          <li class="step step-sun"><span class="step-n"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg></span><h3>Protéger</h3><p>Le jour, terminez avec un écran solaire : ce soin contient des AHA.</p></li>
+        </ol>
+      </section>
+
+      <!-- AVIS -->
+      <section class="section" id="avis" data-reveal>
+        <div class="section-head">
+          <span class="eyebrow">Avis clients</span>
+          <h2>Ce qu'en <em>disent</em> nos clients</h2>
+          <p>De vrais avis de vrais clients, publiés avec leur photo de profil.</p>
+        </div>
+        <div data-reviews>
+          <div class="reviews-empty">
+            <svg class="ic ic-xl" aria-hidden="true"><use href="#i-heart"/></svg>
+            <h3>Chargement des avis…</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENGAGEMENTS -->
+      <section class="promise" data-reveal aria-label="Nos garanties">
+        <div><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg><h3>Achat en confiance</h3><p>Paiement sécurisé et suivi de votre commande.</p></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-return"/></svg><h3>Retours sous <span data-return-days></span> jours</h3><p>Une question ? Écrivez-nous, on trouve une solution.</p></div>
+        <div><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg><h3>Expédition rapide</h3><p>Livraison en <span data-ship-min></span> à <span data-ship-max></span> jours ouvrables.</p></div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" data-reveal>
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions <em>fréquentes</em></h2>
+        </div>
+        <div class="faq-list">
+          <details data-acc="f"><summary><span>Comment fonctionne l'offre de −<span data-offer-percent>15</span>&nbsp;% ?</span></summary>
+            <p>Les 50 premiers clients obtiennent <span data-offer-percent>15</span>&nbsp;% de rabais sur leur commande, appliqué automatiquement à la caisse (une seule fois par client). Dès que 50 commandes ont profité de l'offre, elle se termine automatiquement. Le nombre d'offres restantes est affiché en temps réel sur le site.</p></details>
+          <details data-acc="f"><summary>Ce soin contient-il une protection solaire ?</summary>
+            <p>Non. Bright Boost Gel Cream n'est pas un produit solaire. Comme il contient des AHA, évitez l'exposition au soleil et appliquez un écran solaire le jour.</p></details>
+          <details data-acc="f"><summary>Comment l'utiliser ?</summary>
+            <p>Appliquez-le chaque jour sur le visage et le cou nettoyés, en massant doucement. Suivez toujours les indications imprimées sur l'emballage.</p></details>
+          <details data-acc="f"><summary>Convient-il à ma peau ?</summary>
+            <p>Il est présenté comme adapté à tous les tons de peau et non comédogène. Si votre peau est sensible ou si vous avez une condition cutanée (rosacée, eczéma), demandez l'avis d'un professionnel de la santé avant de l'utiliser, et cessez l'usage en cas d'irritation.</p></details>
+          <details data-acc="f"><summary>Quand vais-je recevoir ma commande ?</summary>
+            <p>Comptez <span data-ship-min></span> à <span data-ship-max></span> jours ouvrables. La livraison est offerte dès <span data-free-over></span> d'achat, sinon <span data-flat-rate></span>.</p></details>
+          <details data-acc="f"><summary>Puis-je retourner mon produit ?</summary>
+            <p>Vous avez <span data-return-days></span> jours pour nous écrire. Les conditions complètes sont détaillées sur la <a class="text-link" href="infos.html#retours">page Retours</a>.</p></details>
+          <details data-acc="f"><summary>Mon paiement est-il sécurisé ?</summary>
+            <p>Le paiement est traité par un prestataire de paiement sécurisé : nous ne conservons pas vos données de carte.</p></details>
+        </div>
+      </section>
+
+      <!-- APPEL À L'ACTION FINAL -->
+      <section class="cta-band" data-reveal>
+        <img src="img/pot.png" alt="" aria-hidden="true">
+        <div>
+          <h2>Prête à révéler votre éclat ?</h2>
+          <p class="js-offer-on">Profitez de −<span data-offer-percent>15</span>&nbsp;% : il reste <b data-offer-remaining>50</b> offres de lancement.</p>
+          <p class="js-offer-off" hidden>Bright Boost Gel Cream, livré en <span data-ship-min></span> à <span data-ship-max></span> jours ouvrables.</p>
+        </div>
+        <a class="btn btn-light btn-lg js-offer-on" href="checkout.html?offer=PREMIERS50&amp;qty=1">Profiter de l'offre <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-light btn-lg js-offer-off" href="#produit" hidden>Acheter maintenant</a>
+      </section>
+
+      <!-- INFOLETTRE -->
+      <section class="newsletter" data-reveal>
+        <div>
+          <h3>Restez dans la lumière</h3>
+          <p>Nouveautés et offres d'Oreva, directement dans votre boîte courriel.</p>
+        </div>
+        <div class="nl-form">
+          <form data-newsletter novalidate>
+            <label class="sr-only" for="nl-email">Votre courriel</label>
+            <input id="nl-email" type="email" placeholder="Votre adresse courriel" autocomplete="email">
+            <button class="btn btn-primary" type="submit">S'inscrire</button>
+          </form>
+          <p class="form-msg" role="status"></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- BARRE D'ACHAT MOBILE -->
+  <div class="sticky-buy" role="region" aria-label="Achat rapide">
+    <img src="img/pot.png" alt="">
+    <div><strong>Bright Boost Gel Cream</strong>
+      <span><b data-price-now>—</b> <s class="js-offer-on" data-price-was></s></span></div>
+    <button class="btn btn-primary" type="button" data-add>Ajouter</button>
+  </div>
+
+  <!-- PIED DE PAGE (généré par app.js) -->
+  <footer class="site-footer" data-footer></footer>
+
+  <script src="config.js"></script>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+  <script src="reviews.js"></script>
+</body>
+</html>

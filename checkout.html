@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paiement | Oreva</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1d0f13">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f2545b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23fff1ee'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body class="checkout-page" data-home="index.html" data-checkout="checkout.html">
+
+  <header class="co-header">
+    <div class="co-header-inner">
+      <a class="logo" href="index.html" aria-label="Oreva, retour à la boutique">Oreva<i aria-hidden="true"></i></a>
+      <span class="secure"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Paiement sécurisé</span>
+    </div>
+  </header>
+
+  <main id="checkoutPage" class="co-wrap">
+
+    <!-- Panier vide -->
+    <div id="coEmpty" class="co-empty" hidden>
+      <svg class="ic ic-xl" aria-hidden="true"><use href="#i-bag"/></svg>
+      <h1>Votre panier est vide</h1>
+      <p>Ajoutez Bright Boost Gel Cream pour passer commande.</p>
+      <a class="btn btn-primary btn-lg" href="index.html#produit">Voir le produit <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div id="coContent" class="co-grid" hidden>
+
+      <!-- Formulaire -->
+      <section class="co-main">
+        <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Boutique</a><span aria-hidden="true">›</span><span aria-current="page">Paiement</span></nav>
+        <h1>Finaliser la commande</h1>
+
+        <div id="coOffer" class="co-offer is-loading" aria-live="polite"><span>Vérification de l'offre…</span></div>
+        <div id="coAlert" class="co-alert" role="alert" hidden></div>
+
+        <form id="checkoutForm" novalidate autocomplete="on">
+
+          <fieldset class="co-block">
+            <legend><span class="n">1</span> Contact</legend>
+            <div id="coAccount" class="co-account" hidden></div>
+            <div class="field">
+              <label for="f-email">Courriel</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+              <small class="err"></small>
+            </div>
+          </fieldset>
+
+          <fieldset class="co-block">
+            <legend><span class="n">2</span> Adresse de livraison</legend>
+            <div class="grid-2">
+              <div class="field full">
+                <label for="f-country">Pays</label>
+                <select id="f-country" name="country" autocomplete="country-name" required>
+                  <option>Canada</option><option>États-Unis</option><option>France</option><option>Belgique</option><option>Suisse</option>
+                </select>
+                <small class="err"></small>
+              </div>
+              <div class="field"><label for="f-first">Prénom</label><input id="f-first" name="firstName" autocomplete="given-name" required><small class="err"></small></div>
+              <div class="field"><label for="f-last">Nom</label><input id="f-last" name="lastName" autocomplete="family-name" required><small class="err"></small></div>
+              <div class="field full"><label for="f-addr">Adresse</label><input id="f-addr" name="address" autocomplete="address-line1" required><small class="err"></small></div>
+              <div class="field full"><label for="f-addr2">Appartement, bureau… <span class="opt">(facultatif)</span></label><input id="f-addr2" name="address2" autocomplete="address-line2"></div>
+              <div class="field"><label for="f-city">Ville</label><input id="f-city" name="city" autocomplete="address-level2" required><small class="err"></small></div>
+              <div class="field"><label for="f-region">Province / État</label><input id="f-region" name="region" autocomplete="address-level1" required><small class="err"></small></div>
+              <div class="field"><label for="f-postal">Code postal</label><input id="f-postal" name="postal" autocomplete="postal-code" required><small class="err"></small></div>
+              <div class="field"><label for="f-phone">Téléphone <span class="opt">(facultatif)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"><small class="err"></small></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="co-block">
+            <legend><span class="n">3</span> Mode de livraison</legend>
+            <label class="method is-selected">
+              <input type="radio" name="shipping" checked>
+              <span class="m-main"><strong>Livraison standard</strong><span class="muted"><span data-ship-min></span> à <span data-ship-max></span> jours ouvrables · estimée <span data-delivery></span></span></span>
+              <b id="shipPrice">—</b>
+            </label>
+          </fieldset>
+
+          <fieldset class="co-block">
+            <legend><span class="n">4</span> Paiement</legend>
+
+            <!-- MODE TEST : aucun argent réel, rien n'est envoyé ni conservé sauf la marque et les 4 derniers chiffres -->
+            <div id="payDemo" class="pay-panel" hidden>
+              <div class="pay-head">
+                <span><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Carte de crédit ou de débit</span>
+                <span class="brands" aria-hidden="true"><i>VISA</i><i>MC</i><i>AMEX</i></span>
+              </div>
+              <div class="pay-fields">
+                <div class="field full"><label for="f-card">Numéro de carte</label>
+                  <input id="f-card" name="card" inputmode="numeric" autocomplete="off" placeholder="4242 4242 4242 4242" maxlength="23"><small class="err"></small></div>
+                <div class="field"><label for="f-exp">Expiration</label>
+                  <input id="f-exp" name="exp" inputmode="numeric" autocomplete="off" placeholder="MM/AA" maxlength="5"><small class="err"></small></div>
+                <div class="field"><label for="f-cvc">Code de sécurité (CVC)</label>
+                  <input id="f-cvc" name="cvc" inputmode="numeric" autocomplete="off" placeholder="123" maxlength="4"><small class="err"></small></div>
+              </div>
+              <p class="pay-note">
+                <svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>
+                <span><b>Mode test : aucun argent n'est prélevé.</b> Utilisez la carte <code>4242 4242 4242 4242</code> (date future, CVC au choix). Carte refusée pour essayer : <code>4000 0000 0000 0002</code>. N'entrez jamais une vraie carte.
+                <button class="link-btn" type="button" data-fill-card>Remplir la carte de test</button></span>
+              </p>
+            </div>
+
+            <!-- PRODUCTION : ici s'affiche le formulaire sécurisé du prestataire (Stripe, PayPal...) -->
+            <div id="payLive" class="pay-panel" hidden>
+              <div class="pay-head"><span><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Carte de crédit ou de débit</span></div>
+              <div id="payment-element" class="pay-skeleton" aria-hidden="true"><div class="sk sk-wide"></div><div class="sk-row"><div class="sk"></div><div class="sk"></div></div></div>
+            </div>
+          </fieldset>
+
+          <div class="terms">
+            <label class="check">
+              <input type="checkbox" name="terms" id="terms">
+              <span>J'ai lu et j'accepte les <a class="text-link" href="infos.html#cgv" target="_blank" rel="noopener">conditions de vente</a> et la <a class="text-link" href="infos.html#confidentialite" target="_blank" rel="noopener">politique de confidentialité</a>.</span>
+            </label>
+            <small class="err" id="termsErr"></small>
+          </div>
+
+          <button id="payBtn" class="btn btn-primary btn-lg btn-block" type="submit">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="pay-label">Confirmer la commande</span>
+          </button>
+          <p class="co-legal"><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Vos informations sont utilisées uniquement pour traiter votre commande.</p>
+        </form>
+      </section>
+
+      <!-- Résumé -->
+      <aside class="co-summary" aria-label="Résumé de la commande">
+        <h2>Résumé de la commande</h2>
+        <div id="sumLines"></div>
+        <dl id="sumTotals" class="totals"></dl>
+        <p id="coRef" class="co-ref" hidden></p>
+        <ul class="co-assure">
+          <li><svg class="ic" aria-hidden="true"><use href="#i-truck"/></svg><span>Livraison offerte dès <span data-free-over></span></span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-return"/></svg><span>Retours sous <span data-return-days></span> jours</span></li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-lock"/></svg> Paiement sécurisé</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Confirmation -->
+  <section id="success" class="success" hidden>
+    <div class="success-card">
+      <span class="ok-ic"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
+      <h1>Merci <span id="okName"></span> !</h1>
+      <p class="ok-lead">Votre commande <b id="okOrder"></b> est enregistrée.</p>
+      <p id="okDiscount" class="ok-badge" hidden>Votre rabais de lancement a été appliqué.</p>
+      <dl class="ok-details">
+        <div><dt>Total</dt><dd id="okTotal"></dd></div>
+        <div><dt>Livraison à</dt><dd id="okAddr"></dd></div>
+        <div><dt>Livraison estimée</dt><dd data-delivery></dd></div>
+      </dl>
+      <p id="okDemo" class="demo-note" hidden><b>Mode test :</b> aucun paiement réel n'a été prélevé.</p>
+      <div id="okAccountIn" class="ok-next" hidden>
+        <p>Suivez chaque étape de votre commande depuis votre compte.</p>
+        <a id="okTrackIn" class="btn btn-primary btn-lg" href="compte.html#commandes">Suivre ma commande</a>
+      </div>
+      <div id="okAccountOut" class="ok-next" hidden>
+        <p><b>Suivez votre colis</b> avec le numéro de commande et votre courriel, ou créez un compte pour retrouver toutes vos commandes, laisser un avis et gagner de l'argent en recommandant Oreva.</p>
+        <div class="ok-btns"><a id="okTrackOut" class="btn btn-primary btn-lg" href="suivi.html">Suivre ma commande</a>
+        <a class="btn btn-ghost-dark btn-lg" href="compte.html?mode=signup">Créer un compte</a></div>
+      </div>
+      <a class="text-link" href="index.html">Retour à la boutique</a>
+    </div>
+  </section>
+
+  <footer class="co-footer">
+    <a href="compte.html">Mon compte</a><a href="suivi.html">Suivre ma commande</a><a href="infos.html#livraison">Livraison</a><a href="infos.html#retours">Retours</a><a href="infos.html#cgv">Conditions de vente</a><a href="infos.html#confidentialite">Confidentialité</a><a href="infos.html#contact">Nous joindre</a>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programme d'affiliation | Oreva</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1d0f13">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f2545b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23fff1ee'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body data-home="index.html" data-checkout="checkout.html" data-page="affiliation.html">
+
+  <header class="site-header" data-header></header>
+
+  <main class="aff-page">
+    <section class="aff-hero">
+      <span class="eyebrow on-dark">Programme d'affiliation</span>
+      <h1>Recommandez Oreva, <em>gagnez <span data-aff-percent></span>&nbsp;%</em> sur chaque commande</h1>
+      <p>Créez votre compte gratuit, partagez votre lien personnel et suivez vos gains en direct. Retrait sur votre compte bancaire dès <span data-aff-min></span>.</p>
+      <div class="hero-cta"><a class="btn btn-primary btn-lg" href="compte.html?mode=signup&amp;next=compte.html%23affiliation" data-auth-out>Créer mon compte affilié</a>
+      <a class="btn btn-primary btn-lg" href="compte.html#affiliation" data-auth-in hidden>Ouvrir mon espace affilié</a>
+      <a class="btn btn-ghost btn-lg" href="compte.html?next=compte.html%23affiliation" data-auth-out>J'ai déjà un compte</a></div>
+    </section>
+    <section class="section">
+      <div class="section-head"><span class="eyebrow">Comment ça marche</span><h2>Quatre étapes, <em>zéro frais</em></h2></div>
+      <ol class="steps">
+        <li class="step"><span class="step-n">1</span><h3>Créez un compte</h3><p>Avec votre photo de profil. Le même compte sert pour acheter et pour l'affiliation.</p></li>
+        <li class="step"><span class="step-n">2</span><h3>Activez l'affiliation</h3><p>Un clic dans votre compte : vous recevez votre code et votre lien.</p></li>
+        <li class="step"><span class="step-n">3</span><h3>Partagez</h3><p>Chaque achat via votre lien (valide <span data-aff-days></span> jours) vous rapporte une commission.</p></li>
+        <li class="step"><span class="step-n">4</span><h3>Retirez</h3><p>Suivez vos gains dans le même compte et retirez-les quand vous voulez, dès <span data-aff-min></span>.</p></li>
+      </ol>
+    </section>
+    <section class="section">
+      <div class="section-head"><span class="eyebrow">Bon à savoir</span><h2>Règles <em>claires</em></h2></div>
+      <div class="faq-list">
+        <details data-acc="a"><summary><span>Quand ma commission est-elle disponible ?</span></summary><p>Elle est « en attente » à la commande et devient disponible une fois la commande livrée. Elle est annulée si la commande est annulée ou remboursée.</p></details>
+        <details data-acc="a"><summary><span>Puis-je utiliser mon propre lien ?</span></summary><p>Non : les commandes passées par vous-même ou avec votre courriel ne génèrent pas de commission.</p></details>
+        <details data-acc="a"><summary><span>Comment suis-je payé(e) ?</span></summary><p>Par virement bancaire, sur demande depuis votre compte, dès que votre solde disponible atteint <span data-aff-min></span>.</p></details>
+        <details data-acc="a"><summary><span>Que puis-je dire en partageant ?</span></summary><p>Indiquez que vous touchez une commission, restez fidèle à la réalité (aucun faux avis, aucune promesse médicale) et évitez le pourriel. Voir les <a class="text-link" href="infos.html#affiliation-conditions">conditions complètes</a>.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" data-footer></footer>
+
+  <script src="config.js"></script>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

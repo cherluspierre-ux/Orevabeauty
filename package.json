@@ -1,0 +1,8 @@
+{
+  "name": "oreva",
+  "version": "1.0.0",
+  "description": "Boutique Oreva - Bright Boost Gel Cream (offre -15 % pour les 50 premiers clients)",
+  "private": true,
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

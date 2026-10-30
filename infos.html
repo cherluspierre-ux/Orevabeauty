@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Informations | Oreva</title>
+  <meta name="theme-color" content="#1d0f13">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23f2545b'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23fff1ee'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
+</head>
+<body class="infos-page" data-home="index.html" data-checkout="checkout.html">
+
+  <header class="site-header" data-header></header>
+
+  <!-- NOTE POUR LE PROPRIÉTAIRE : ces textes sont des modèles à adapter à ta réalité
+       (pays desservis, transporteur, politique de retour, entreprise, lois applicables).
+       Fais-les valider si nécessaire avant l'ouverture. Les valeurs chiffrées viennent de config.js. -->
+  <div class="infos-wrap">
+    <nav class="infos-nav" aria-label="Sections">
+      <a href="#livraison">Livraison</a>
+      <a href="#retours">Retours</a>
+      <a href="#cgv">Conditions de vente</a>
+      <a href="#confidentialite">Confidentialité</a>
+      <a href="#affiliation-conditions">Conditions d'affiliation</a>
+      <a href="#contact">Nous joindre</a>
+    </nav>
+
+    <main class="infos-main">
+      <header class="infos-head">
+        <span class="eyebrow">Informations</span>
+        <h1>Tout savoir avant de <em>commander</em></h1>
+      </header>
+
+      <section id="livraison" class="info-block">
+        <h2>Livraison</h2>
+        <p>Les commandes sont préparées rapidement et livrées en <b><span data-ship-min></span> à <span data-ship-max></span> jours ouvrables</b>, à l'adresse indiquée lors de la commande.</p>
+        <ul>
+          <li><b>Livraison offerte</b> dès <span data-free-over></span> d'achat (avant rabais).</li>
+          <li>Sous ce montant, les frais de livraison sont de <span data-flat-rate></span>.</li>
+          <li>Les pays desservis sont proposés à la caisse.</li>
+        </ul>
+        <p>Les délais sont donnés à titre indicatif et peuvent varier selon le transporteur et la destination.</p>
+      </section>
+
+      <section id="retours" class="info-block">
+        <h2>Retours et remboursements</h2>
+        <p>Vous avez <b><span data-return-days></span> jours</b> à compter de la réception de votre commande pour nous écrire si le produit ne vous convient pas.</p>
+        <ul>
+          <li>Pour des raisons d'hygiène, les produits cosmétiques doivent nous être retournés non ouverts et non utilisés.</li>
+          <li>Si le produit arrive endommagé ou si nous avons commis une erreur, contactez-nous : nous trouverons une solution (remplacement ou remboursement).</li>
+          <li>Une fois le retour reçu et vérifié, le remboursement est effectué sur le moyen de paiement utilisé.</li>
+        </ul>
+        <p>Pour lancer un retour, écrivez-nous à <a class="text-link" data-mailto href="#"></a> en indiquant votre numéro de commande.</p>
+      </section>
+
+      <section id="cgv" class="info-block">
+        <h2>Conditions de vente</h2>
+        <h3>Prix</h3>
+        <p>Les prix sont indiqués en <b>dollars (<span data-currency>CAD</span>)</b>. Le prix payé est celui affiché au moment de la commande.</p>
+        <h3>Offre de lancement</h3>
+        <p>L'offre de lancement (<span data-offer-percent>15</span>&nbsp;% de rabais) est réservée aux 50 premiers clients, à raison d'un rabais par client. Elle est appliquée automatiquement à la caisse tant qu'il reste des offres disponibles, et se termine dès que le 50<sup>e</sup> rabais a été accordé. Elle ne peut pas être combinée à une autre offre.</p>
+        <h3>Commande et paiement</h3>
+        <p>Votre commande est confirmée lorsque le paiement est accepté. Nous nous réservons le droit d'annuler une commande en cas d'erreur manifeste de prix ou de rupture de stock, avec remboursement intégral.</p>
+        <h3>Utilisation du produit</h3>
+        <p>Suivez les indications imprimées sur l'emballage. Les produits contenant des AHA exigent une protection solaire. En cas d'irritation, cessez l'utilisation. En cas de doute, demandez conseil à un professionnel de la santé.</p>
+        <h3>Marques</h3>
+        <p><span data-shop-name>Oreva</span> est une boutique indépendante qui n'est pas affiliée à la marque Neutrogena. Les marques citées appartiennent à leurs propriétaires respectifs.</p>
+      </section>
+
+      <section id="confidentialite" class="info-block">
+        <h2>Confidentialité</h2>
+        <p>Nous collectons uniquement les informations nécessaires pour traiter votre commande et gérer votre compte.</p>
+        <ul>
+          <li><b>Commande :</b> nom, adresse de livraison, courriel et, si vous le fournissez, numéro de téléphone. Ces informations servent à préparer, expédier et suivre votre commande, et à vous répondre.</li>
+          <li><b>Compte client :</b> prénom, nom, courriel, photo de profil et mot de passe (conservé sous forme chiffrée, jamais en clair). La photo de profil est obligatoire à l'inscription.</li>
+          <li><b>Avis :</b> si vous publiez un avis, il s'affiche publiquement avec votre prénom, l'initiale de votre nom, votre photo de profil et les photos ou vidéos que vous choisissez d'ajouter. Vous pouvez modifier ou supprimer votre avis à tout moment depuis la page du produit.</li>
+          <li><b>Affiliation :</b> si vous devenez affilié(e), nous conservons votre code, vos commissions et vos demandes de retrait. Nous ne conservons jamais votre numéro de compte complet : seulement les 4 derniers chiffres, pour vous le rappeler.</li>
+          <li><b>Paiement :</b> les données de carte sont saisies chez le prestataire de paiement et ne passent jamais par nos serveurs.</li>
+          <li>Nous ne vendons pas vos données personnelles. Si vous vous inscrivez à l'infolettre, votre courriel sert uniquement à vous envoyer nos nouvelles ; désinscription possible en tout temps.</li>
+          <li>Votre navigateur conserve sur votre appareil le contenu de votre panier, votre session de connexion (témoin technique nécessaire au fonctionnement du compte) et, si vous êtes arrivé(e) par un lien de parrainage, le code de parrainage pendant <span data-aff-days></span> jours.</li>
+        </ul>
+        <p>Pour accéder à vos données, les corriger ou les faire supprimer (compte, avis), écrivez-nous à <a class="text-link" data-mailto href="#"></a>.</p>
+      </section>
+
+      <section id="affiliation-conditions" class="info-block">
+        <h2>Conditions du programme d'affiliation</h2>
+        <ul>
+          <li>Tout client disposant d'un compte peut devenir affilié(e) gratuitement. Vous recevez un code et un lien personnels.</li>
+          <li>Vous gagnez <b><span data-aff-percent></span>&nbsp;%</b> du montant des commandes passées par votre lien (après rabais, livraison et taxes exclues), pendant <span data-aff-days></span> jours après le clic du client.</li>
+          <li>La commission est « en attente » à la commande, puis devient <b>disponible une fois la commande livrée</b>. Elle est annulée si la commande est annulée ou remboursée.</li>
+          <li>Retrait minimum : <b><span data-aff-min></span></b>. Vous pouvez demander un retrait dès que votre solde disponible l'atteint.</li>
+          <li>Les commandes que vous passez vous-même, ou avec votre propre courriel, ne génèrent aucune commission.</li>
+          <li><b>Transparence :</b> si vous partagez votre lien, indiquez clairement que vous êtes rémunéré(e) lorsque quelqu'un achète. N'inventez aucun avis, aucun résultat et aucune promesse médicale. Pas de pourriel.</li>
+          <li>Nous pouvons refuser, suspendre ou annuler des commissions en cas de fraude, d'abus ou de non-respect de ces conditions.</li>
+        </ul>
+        <p class="muted small">Modèle à adapter et à faire valider (taux, délais, modalités de versement et obligations fiscales selon votre pays).</p>
+      </section>
+
+      <section id="contact" class="info-block">
+        <h2>Nous joindre</h2>
+        <p>Une question sur le produit, une commande ou un retour ? Écrivez-nous à <a class="text-link" data-mailto href="#"></a>.</p>
+        <form class="contact-form" data-contact novalidate>
+          <div class="grid-2">
+            <div class="field"><label for="c-name">Nom</label><input id="c-name" name="nom" autocomplete="name"></div>
+            <div class="field"><label for="c-email">Courriel</label><input id="c-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field full"><label for="c-sujet">Sujet</label>
+              <select id="c-sujet" name="sujet"><option>Question sur le produit</option><option>Ma commande</option><option>Retour ou remboursement</option><option>Autre</option></select></div>
+            <div class="field full"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5"></textarea></div>
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">Envoyer le message <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="muted small">Ce bouton ouvre votre application courriel avec le message prêt à envoyer.</p>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer" data-footer></footer>
+
+  <script src="config.js"></script>
+  <script src="core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
